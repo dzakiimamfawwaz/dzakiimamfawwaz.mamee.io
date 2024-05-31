@@ -256,7 +256,7 @@ a {
     height: 70px;
     border-radius: 50%;
     margin-top: 3.5px;
-    border: 2.5px solid #ffffff;
+    border: 3.5px solid #ffffff;
   }
 
   .nav__toggle,
@@ -288,33 +288,36 @@ a {
 /*===================================== MAIN MENU ===============*/
 
 .hero-section {
-  margin-top: 50px;
+  margin-top: 40px;
   padding-bottom: 0;
   background-color: #ffe200;
   color: rgb(9, 8, 8);
   padding: 5px 20px;
   text-align: center;
+  border-bottom: 5px solid #ffe200 ;
+  
 }
 
 .hero-content {
-  max-width: 880px;
+  max-width: 680px;
   margin: 0 auto;
 }
 
 .hero-section h1 {
   font-size: 120px;
-  margin: 0;
+  margin-top: 25px;
   font-family: "chewy";
 }
 
 .hero-section p {
   font-family: "chewy";
-  font-size: 55px;
-  margin: 20px 20px;
-  background-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 6px 10px rgba(32, 33, 19, 0.3);
-  border-radius: 10px;
-  padding: 15px;
+  font-size: 40px;
+  margin: 15px 20px;
+  padding: 10px;
+}
+
+.hero-section p:hover{
+  transform: scale(1.05);
 }
 
 .logo-mamee {
@@ -324,31 +327,32 @@ a {
 }
 
 .logo-mamee img {
-  width: 100%;
-  max-width: 385px;
+  width: 350px;
+  max-width: 500px;
   height: auto;
-  border: 1px solid rgb(251, 245, 131);
+  border: 10px solid rgb(255, 255, 255);
   border-radius: 50%;
+  transition: transform 0.3s ease, width 0.3s ease;
 }
 
-.cta-button {
-  display: inline-block;
-  padding: 15px 30px;
-  background-color: #5f583c;
-  color: #333;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1.2em;
+.logo-mamee img:hover {
+  transform: scale(1.1); /* Mengubah skala gambar saat di-hover */
 }
+
+.logo-mamee img:active {
+  transform: scale(1.2); /* Mengubah skala gambar saat di-klik */
+}
+
 
 /*=================== BUY SECTION CA========================*/
 .buy-section {
+  margin-top: -35px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 87vh;
+  height: 93vh;
   width: 100%;
-  background-image: url(images/testingbg2.png);
+  background-image: url(images/bg/bg.png);
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -368,7 +372,8 @@ a {
 .buy-section-details img {
   max-width: 100%;
   height: auto;
-  margin-bottom: 60px;
+  margin-bottom: 70px;
+  border: 4px solid rgb(255, 255, 255);
 }
 
 .buy-section-details h1 {
@@ -384,12 +389,19 @@ a {
 
 .buy-section-details h2 {
   position: relative;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 6px 10px rgba(32, 33, 19, 0.3);
   color: rgb(0, 0, 0);
   text-align: center;
   font-family: "chewy";
   font-size: 40px;
   border-radius: 5px;
   margin: 10px auto;
+  padding: 10PX;
+}
+
+.buy-section-details h2:hover{
+  transform: scale(1.05);
 }
 
 .buy-section-details-content {
@@ -420,9 +432,10 @@ a {
   background-color: #ffe200;
   margin: 60px auto;
   padding-top: 10px;
+  width: 900px;
 }
 
-.memes-section h2 {
+.memes-section h1 {
   margin: 20px auto;
   text-align: center;
   font-family: "chewy";
@@ -435,12 +448,12 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
 }
 
 .meme-gallery img {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   max-width: 500px;
   max-height: 500px;
   border-radius: 10px;
@@ -448,10 +461,11 @@ a {
 
 /*=================== TOKENOMICS SECTION========================*/
 .tokenomics-section {
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Set height to 100% of the viewport height */
+  height: 83vh; /* Set height to 100% of the viewport height */
   width: 100%;
   background-color: #ffe200; 
   border: none;
@@ -477,7 +491,7 @@ a {
 /*================================ eat section===========================*/
 .eat-section {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 .eat-content h1 {
   font-family: "chewy";
@@ -494,7 +508,7 @@ a {
   transition: opacity 0.5s ease;
 }
 .click-count {
-  margin-top: 20px;
+  margin-top: 10px;
   font-family: "chewy";
   font-size: 32px;
   color: #000000;
@@ -524,6 +538,77 @@ a {
   transform: scale(0.95);
 }
 
+/*===================== Song Section =========================*/
+.song-section {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.song-card {
+  background-color: #ffe200;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px;
+  height: 430px;
+}
+
+.song-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.song-section h1 {
+  margin-top: 25px;
+  font-family: "chewy";
+  font-size: 90px;
+  margin-bottom: 15px;
+  color: #000000;
+  
+}
+
+.mamee-song {
+  position: relative;
+}
+
+.mamee-song img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.play-button {
+  display: inline-block;
+  padding: 20px 40px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  font-family: "chewy";
+  font-size: 32px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: #0e74e1;
+    color: #ffffff;
+}
+
+#songSlider {
+  width: 200px;
+  margin-top: 20px;
+}
 /*=================== FOOTER SECTION========================*/
 footer {
   background-color: #333;
@@ -539,12 +624,12 @@ footer {
   }
 
   .hero-content {
-    padding: 0 10px;
+    padding: 0px;
   }
 
   .hero-section h1 {
     font-size: 7em;
-    margin: 0;
+    margin: 40px auto;
     padding: 0;
   }
 
@@ -555,11 +640,12 @@ footer {
   }
 
   .logo-mamee img {
-    width: 100%;
-    max-width: 300px;
+    margin-top: -20px;
+    width: 380px;
+    max-width: 400px;
   }
   .buy-section {
-    margin-top: -100px;
+    margin-top: -110px;
     padding-top: 0px;
     padding-bottom: 0PX;
   }
@@ -571,17 +657,22 @@ footer {
     font-size: 25px;
   }
   .buy-section-details a img {
-    width: 80px;
-    height: 80px;
+    width: 65px;
+    height: 65px;
   }
 
   .memes-section {
     margin-top: 40px;
     padding-top: 20px;
     padding-bottom: 0PX;
+    width: 400px;
   }
 
-  .memes-section h2 {
+  .meme-gallery{
+    gap: 5px;
+  }
+
+  .memes-section h1 {
     font-size: 60px;
   }
 
@@ -597,5 +688,47 @@ footer {
     padding-top: 0px;
     padding-bottom: 0PX;
   }
+
+  .eat-section{
+    margin-top: 0px;
+  }
+  .eat-content h1 {
+    font-size: 60px;
+  }
+  .eat-content img {
+    width:  250px;
+    height: 250px;
+  }
+  .song-section{
+    margin-top: 20px;
+
+  }
+  .song-section h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
   
+}
+
+
+
+
+
+
+/*================= animasi =======================*/
+h1,.hero-section p {
+  animation: pulseText 1.5s ease-in-out infinite;
+}
+
+
+@keyframes pulseText {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

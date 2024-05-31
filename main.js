@@ -46,4 +46,30 @@ document.addEventListener("DOMContentLoaded", () => {
       clickCount++;
       document.getElementById('click-counter').textContent = clickCount;
     });
+
+
+      const audio = document.getElementById('audio');
+      const playButton = document.getElementById('playButton');
+  
+      playButton.addEventListener('click', () => {
+          if (audio.paused) {
+              audio.play();
+              playButton.textContent = 'Pause';
+          } else {
+              audio.pause();
+              playButton.textContent = 'Play';
+          }
+      });
+
+      audio.addEventListener('timeupdate', () => {
+    const value = (audio.currentTime / audio.duration) * 100;
+    songSlider.value = value;
 });
+
+songSlider.addEventListener('input', () => {
+    const time = (songSlider.value / 100) * audio.duration;
+    audio.currentTime = time;
+});
+  });
+
+
